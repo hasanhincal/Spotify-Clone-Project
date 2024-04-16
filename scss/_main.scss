@@ -1,0 +1,183 @@
+main {
+  width: 100%;
+  margin: 10px;
+  margin-bottom: 80px;
+  border-radius: $radius;
+  background-color: $card-backgraund;
+
+  header {
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $color;
+      padding: 15px 30px;
+      margin: 10px;
+      gap: 40px;
+      border-radius: $radius;
+
+      #menu {
+        font-size: 25px;
+        display: none;
+        transition: $transition;
+        &:hover {
+          font-size: 30px;
+        }
+
+        @include ipad-pro {
+          display: block;
+        }
+      }
+
+      .search-input {
+        position: relative;
+
+        input {
+          background-color: black;
+          outline: none;
+          border: none;
+          max-width: 450px;
+          width: 450px;
+          padding: 15px 40px 15px 20px;
+          color: $text;
+          border-radius: $radius;
+          @include large {
+            width: 350px;
+          }
+          @include laptop {
+            width: 225px;
+          }
+
+          @include ipad-pro {
+            width: 350px;
+          }
+          @include ipad {
+            width: 300px;
+          }
+          @include mobile {
+            width: 200px;
+          }
+          @include mobile-md {
+            width: 150px;
+          }
+
+          &:focus {
+            box-shadow: 0 0 10px rgb(56, 56, 56);
+          }
+        }
+        i {
+          position: absolute;
+          cursor: pointer;
+          right: 15px;
+          top: 13px;
+        }
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        transition: $transition;
+        @include large {
+          gap: 30px;
+        }
+        @include laptop {
+          gap: 10px;
+        }
+        @include ipad-pro {
+          display: none;
+        }
+
+        :nth-child(4) {
+          color: black;
+          border-radius: $radius;
+          background-color: rgb(45, 147, 42);
+          &:hover {
+            scale: 0.95;
+          }
+        }
+
+        li {
+          cursor: pointer;
+          font-size: 15px;
+          letter-spacing: 1.5px;
+          color: $text;
+          padding: 10px;
+          transition: $transition;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .songs {
+    h2 {
+      padding: 20px;
+      cursor: pointer;
+      margin-left: 85px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      .card {
+        width: 170px;
+        background-color: $color;
+        padding: 20px;
+        border-radius: $radius;
+        margin: 10px;
+        opacity: 0.7;
+        cursor: pointer;
+        transition: $transition;
+
+        h4 {
+          margin-bottom: 6px;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+        &:hover .play {
+          opacity: 1;
+          bottom: 60px;
+        }
+        figure {
+          position: relative;
+          img {
+            width: 100%;
+            border-radius: $radius;
+            margin-bottom: 10px;
+          }
+          .play {
+            background-color: $spotify-color;
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            font-size: 20px;
+            opacity: 0;
+
+            position: absolute;
+            right: 10px;
+            bottom: -10px;
+            transition: $transition;
+
+            &:hover {
+              scale: 1.1;
+              background-color: rgb(101, 244, 96);
+            }
+          }
+        }
+      }
+    }
+  }
+}

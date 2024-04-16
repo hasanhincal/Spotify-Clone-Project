@@ -1,0 +1,47 @@
+aside {
+  padding: 20px 15px;
+  margin: 10px;
+  background-color: $card-backgraund;
+  border-radius: $radius;
+  margin-bottom: 80px;
+  figure {
+    #logo1 {
+      max-width: 130px;
+      cursor: pointer;
+
+      @include ipad {
+        display: none;
+      }
+    }
+    #logo2 {
+      max-width: 40px;
+      cursor: pointer;
+      display: none;
+      @include ipad {
+        display: block;
+      }
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+      white-space: nowrap;
+
+      a {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        @include ipad {
+          font-size: 24px;
+          justify-content: center;
+        }
+        span {
+          @include ipad {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

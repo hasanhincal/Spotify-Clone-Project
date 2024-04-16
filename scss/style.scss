@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto:wght@300;400;500;700;900&family=Tilt+Neon&display=swap");
+@import "variables";
+@import "mixin";
+@import "aside";
+@import "main";
+@import "playing";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-color;
+  min-height: 100vh;
+  color: $text;
+  font-family: $primary-font;
+  overflow-x: hidden;
+  display: flex;
+
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: $text;
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: $radius;
+  transition: $transition;
+
+  &:hover {
+    background-color: $spotify-color;
+    color: black;
+  }
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 30px;
+  top: 110px;
+  z-index: 1000;
+  background-color: black;
+  padding: 10px;
+  border-radius: $radius;
+}

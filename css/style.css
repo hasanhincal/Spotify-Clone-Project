@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto:wght@300;400;500;700;900&family=Tilt+Neon&display=swap");
+aside {
+  padding: 20px 15px;
+  margin: 10px;
+  background-color: #242424;
+  border-radius: 10px;
+  margin-bottom: 80px;
+}
+aside figure #logo1 {
+  max-width: 130px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  aside figure #logo1 {
+    display: none;
+  }
+}
+aside figure #logo2 {
+  max-width: 40px;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  aside figure #logo2 {
+    display: block;
+  }
+}
+aside figure nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+  white-space: nowrap;
+}
+aside figure nav a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  aside figure nav a {
+    font-size: 24px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  aside figure nav a span {
+    display: none;
+  }
+}
+
+main {
+  width: 100%;
+  margin: 10px;
+  margin-bottom: 80px;
+  border-radius: 10px;
+  background-color: #242424;
+}
+main header form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  padding: 15px 30px;
+  margin: 10px;
+  gap: 40px;
+  border-radius: 10px;
+}
+main header form #menu {
+  font-size: 25px;
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+main header form #menu:hover {
+  font-size: 30px;
+}
+@media screen and (max-width: 850px) {
+  main header form #menu {
+    display: block;
+  }
+}
+main header form .search-input {
+  position: relative;
+}
+main header form .search-input input {
+  background-color: black;
+  outline: none;
+  border: none;
+  max-width: 450px;
+  width: 450px;
+  padding: 15px 40px 15px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+@media screen and (max-width: 1375px) {
+  main header form .search-input input {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main header form .search-input input {
+    width: 225px;
+  }
+}
+@media screen and (max-width: 850px) {
+  main header form .search-input input {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main header form .search-input input {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 670px) {
+  main header form .search-input input {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 570px) {
+  main header form .search-input input {
+    width: 150px;
+  }
+}
+main header form .search-input input:focus {
+  box-shadow: 0 0 10px rgb(56, 56, 56);
+}
+main header form .search-input i {
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+  top: 13px;
+}
+main header form ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  transition: 0.3s ease-in-out;
+}
+@media screen and (max-width: 1375px) {
+  main header form ul {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main header form ul {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 850px) {
+  main header form ul {
+    display: none;
+  }
+}
+main header form ul :nth-child(4) {
+  color: black;
+  border-radius: 10px;
+  background-color: rgb(45, 147, 42);
+}
+main header form ul :nth-child(4):hover {
+  scale: 0.95;
+}
+main header form ul li {
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+main header form ul li:hover {
+  color: #fff;
+}
+main .songs h2 {
+  padding: 20px;
+  cursor: pointer;
+  margin-left: 85px;
+}
+main .songs h2:hover {
+  text-decoration: underline;
+}
+main .songs .list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+main .songs .list .card {
+  width: 170px;
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+main .songs .list .card h4 {
+  margin-bottom: 6px;
+}
+main .songs .list .card:hover {
+  opacity: 1;
+}
+main .songs .list .card:hover .play {
+  opacity: 1;
+  bottom: 60px;
+}
+main .songs .list .card figure {
+  position: relative;
+}
+main .songs .list .card figure img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+main .songs .list .card figure .play {
+  background-color: #1cdf63;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+  transition: 0.3s ease-in-out;
+}
+main .songs .list .card figure .play:hover {
+  scale: 1.1;
+  background-color: rgb(101, 244, 96);
+}
+
+.playing {
+  position: fixed;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  text-shadow: 0 0 10px black;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgb(6, 78, 6), black);
+}
+.playing .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.playing .info img {
+  width: 90px;
+  border-radius: 50%;
+}
+.playing .info p {
+  line-height: 1.5;
+}
+.playing .info h3:nth-child(2) {
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.animate {
+  animation: turn 5s infinite linear;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Nova Slim", system-ui;
+  overflow-x: hidden;
+  display: flex;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+a:hover {
+  background-color: #1cdf63;
+  color: black;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 30px;
+  top: 110px;
+  z-index: 1000;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */

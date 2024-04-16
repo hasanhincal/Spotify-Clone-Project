@@ -1,0 +1,43 @@
+.playing {
+  position: fixed;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  text-shadow: 0 0 10px black;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgb(6, 78, 6), black);
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    img {
+      width: 90px;
+      border-radius: 50%;
+    }
+    p {
+      line-height: 1.5;
+    }
+    h3:nth-child(2) {
+      letter-spacing: 1.5px;
+      margin-top: 5px;
+      color: #fff;
+    }
+  }
+}
+
+.animate {
+  animation: turn 5s infinite linear;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
